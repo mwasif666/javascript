@@ -6,21 +6,24 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="para">My Name is Wasif</p>
     <button id="hidebtn">Hide</button>
     <button id="Show">Show</button>
+    <p id="para">My Name is Wasif</p>
+
     <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.js"
-      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
     <script>
-      $(function () {
+      $(document).ready(function () {
         $("#hidebtn").click(function () {
-          $("#para").hide();
+          $("#para").hide(1000);
         });
         $("#Show").click(function () {
-          $("#para").show();
+          $("#para").show(1000).fadeIn("slow");
+          $("#para").fadeIn(3000);
         });
       });
     </script>
